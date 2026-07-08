@@ -20,6 +20,18 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: [6, "Password length must be greater than equal to 6"],
     },
+    currentStreak: {
+      type: Number,
+      default: 0
+    },
+    longestStreak: {
+      type: Number,
+      default: 0,
+    },
+    lastLogDate: {
+      type: Date,
+      default: null,
+    },
   },
   { timestamps: true },
 );
